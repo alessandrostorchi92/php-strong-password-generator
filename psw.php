@@ -5,6 +5,7 @@ session_start();
 // Per cambiare password inserire nell'URL: index.php?length_psw=number 
 
 if(!isset($_SESSION['password'])) {
+    $_SESSION ["error"] = "La password non è stata generata";
     header("Location: ./index.php");
     die;
   }
