@@ -2,6 +2,13 @@
 
 session_start();
 
+// Per cambiare password inserire nell'URL: index.php?length_psw=number 
+
+if(!isset($_SESSION['password'])) {
+    header("Location: ./index.php");
+    die;
+  }
+
 ?>
 
 <!doctype html>
