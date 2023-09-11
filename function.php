@@ -21,6 +21,6 @@ function passwordGenerator ($elements, $length) {
 
 $generated_psw = passwordGenerator($characters, $length_password);
 
-//var_dump($generated_psw); OK
+// var_dump($generated_psw); OK
 
 ?>

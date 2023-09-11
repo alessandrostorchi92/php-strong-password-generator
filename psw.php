@@ -1,19 +1,8 @@
 <?php
 
-include_once 'function.php';
-
 session_start();
 
-if ($generated_psw != null ) {
-    
-    $_SESSION['password'] = $generated_psw;
-    header('Location: ./psw.php');
-    die;
-
-}
-
 ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -45,18 +34,18 @@ if ($generated_psw != null ) {
 
     </head>
 
-<body>
+    <body>
 
-    <div class="container bg-info text-center">
-        <h1 class="mb-5 display-1 mt-4">PHP Strong Password Generator</h1>
-        <p class="mb-5 fw-bold fs-3">Inserisci la lunghezza della password che desideri generare</p>
+        <div class="container py-5 text-center">
+        
+            <h1 class="mt-5">La tua password è:<?php echo $_SESSION ["password"] ?></h1>
+        
+        </div>
+        
+    </body>
 
-        <form action="index.php" method="GET">
-            <label class="mt-5 mb-5 text-white fw-bold">Lunghezza della password: </label>
-            <input type="number" name="length_psw" min="1" max="16" required>
-            <button type="submit" class="btn btn-outline-light ms-4 fw-bold">Genera Password</button>
-        </form>
 
-</body>
+
+
 
 </html>
