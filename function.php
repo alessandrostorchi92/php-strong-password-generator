@@ -13,13 +13,14 @@ $characters = $lowercase_letters . $uppercase_letters . $numbers . $symbols;
 
 function passwordGenerator ($elements, $length) {
 
-    $psw = substr(str_shuffle($characters), $length_password, 8);
+    $psw = substr(str_shuffle($elements), $length, 8);
 
     return $psw;
 
-}
-
+};
 
 $generated_psw = passwordGenerator($characters, $length_password);
+
+//var_dump($generated_psw); OK
 
 ?>
