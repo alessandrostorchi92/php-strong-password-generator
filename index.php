@@ -1,5 +1,7 @@
 <?php
 
+include_once 'function.php';
+
 ?>
 
 
@@ -41,7 +43,7 @@
 
         <form action="index.php" method="GET">
             <label class="mt-5 mb-5 text-white fw-bold">Lunghezza della password: </label>
-            <input type="number" name="length" min="1" max="16" required>
+            <input type="number" name="length_psw" min="1" max="16" required>
             <button type="submit" class="btn btn-outline-light ms-4 fw-bold">Genera Password</button>
         </form>
 
